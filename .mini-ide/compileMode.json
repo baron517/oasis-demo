@@ -1,0 +1,9 @@
+{
+  "modes": [
+    {
+      "title": "pocketPackage/pages/camera/camera",
+      "page": "pocketPackage/pages/camera/camera",
+      "pageQuery": "model=https%3A%2F%2Fwifi.pro.youzewang.com%2Fmodel%2Frobot.glb"
+    }
+  ]
+}

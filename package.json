@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@oasis-engine-toolkit/controls": "^0.8.0",
+    "@oasis-engine/miniprogram-adapter": "^0.3.9",
+    "oasis-engine": "^0.8.2"
+  }
+}

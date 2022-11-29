@@ -1,0 +1,14 @@
+{
+  "pages": [
+    
+    "pocketPackage/pages/camera/camera"
+   
+    
+  ],
+  "window": {
+    "defaultTitle": "My App",
+    "v8WorkerPlugins": "gcanvas_runtime",
+    "v8Worker": 1,
+    "enableSkia": "true"
+  }
+}
