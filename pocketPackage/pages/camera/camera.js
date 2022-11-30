@@ -2,9 +2,6 @@ import * as OASIS from "oasis-engine/dist/miniprogram";
 import { OrbitControl } from "@oasis-engine-toolkit/controls/dist/miniprogram";
 import { registerCanvas } from "@oasis-engine/miniprogram-adapter";
 import { Vector3 } from '@oasis-engine/math';
-import { Camera, GLTFResource, WebGLEngine,DirectLight,Texture2D,
-  AnimationClip,Animator,
-  TextureFormat,BackgroundMode,BackgroundTextureFillMode } from "oasis-engine";
 
 
 
@@ -61,7 +58,7 @@ Page({
 cameraEntity.transform.position = new Vector3(0, 5, 10);
 cameraEntity.transform.lookAt(new Vector3(0, 0, 0));
 
-cameraEntity.addComponent(Camera);
+cameraEntity.addComponent(OASIS.Camera);
 
 cameraEntity.addComponent(OrbitControl);
 
@@ -82,7 +79,7 @@ this.engine.run();
     this.setData({
       loadingText:"模型正在加载中..."
     })
-    this.gltf = await this.engine.resourceManager.load("https://wifi.pro.youzewang.com/model/robot.glb");
+    this.gltf = await this.engine.resourceManager.load("https://lg-2fw0hhsc-1256786476.cos.ap-shanghai.myqcloud.com/robot.glb");
     console.log("模型");
     this.gltf.defaultSceneRoot.transform.scale=new Vector3(0.5, 0.5, 0.5);
     this.gltf.defaultSceneRoot.transform.position=new Vector3(0, 0, 0);
@@ -91,9 +88,9 @@ this.engine.run();
     this.rootEntity.addChild(this.gltf.defaultSceneRoot);
     console.log(this.gltf.defaultSceneRoot);
 
-    const animator = this.gltf.defaultSceneRoot.getComponent(Animator);
+    const animator = this.gltf.defaultSceneRoot.getComponent(OASIS.Animator);
     console.log("动画",animator,this.gltf.animations[0].name);
-    //animator.play(gltf.animations[0].name);
+    animator.play(this.gltf.animations[0].name);
 
 //     this.engine.resourceManager
 //   .load(this.data.modelUrl)
