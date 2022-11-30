@@ -79,7 +79,7 @@ this.engine.run();
     this.setData({
       loadingText:"模型正在加载中..."
     })
-    this.gltf = await this.engine.resourceManager.load("https://lg-2fw0hhsc-1256786476.cos.ap-shanghai.myqcloud.com/robot.glb");
+    this.gltf = await this.engine.resourceManager.load("https://wifi.pro.youzewang.com/model/robot.glb");
     console.log("模型");
     this.gltf.defaultSceneRoot.transform.scale=new Vector3(0.5, 0.5, 0.5);
     this.gltf.defaultSceneRoot.transform.position=new Vector3(0, 0, 0);
